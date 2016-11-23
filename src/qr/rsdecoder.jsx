@@ -3,6 +3,8 @@
   
   lazarsoft@gmail.com, www.lazarsoft.info
   
+	Ported to ES6 By Ramiro Rojo <ramiro.rojo.cretta@gmail.com>
+
 */
 
 /*

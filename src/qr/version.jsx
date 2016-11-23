@@ -24,6 +24,8 @@
 * limitations under the License.
 */
 
+import { BitMatrix } from './bitmat';
+
 export class ECB {
 	constructor(count, dataCodewords) {
 		this.count = count;

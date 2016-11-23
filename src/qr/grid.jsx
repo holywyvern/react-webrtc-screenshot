@@ -25,6 +25,7 @@
 */
 
 import { PerspectiveTransform } from './detector';
+import { BitMatrix }            from './bitmat';
 
 GridSampler = {
 

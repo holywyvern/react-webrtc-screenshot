@@ -22,6 +22,8 @@
 * limitations under the License.
 */
 import { ErrorCorrectionLevel } from './errorlevel';
+import { DataBlock }            from './datablock';
+import { BitMatrixParser }      from './bmparser';
 
 Decoder={};
 Decoder.rsDecoder = new ReedSolomonDecoder(GF256.QR_CODE_FIELD);

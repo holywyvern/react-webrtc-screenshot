@@ -3,6 +3,8 @@
   
   lazarsoft@gmail.com, www.lazarsoft.info
   
+	Ported to ES6 By Ramiro Rojo <ramiro.rojo.cretta@gmail.com>
+
 */
 
 /*
@@ -21,187 +23,147 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+class DataMask000 {
 
-
-DataMask = {};
-
-DataMask.forReference = function(reference)
-{
-	if (reference < 0 || reference > 7)
-	{
-		throw "System.ArgumentException";
-	}
-	return DataMask.DATA_MASKS[reference];
-}
-
-function DataMask000()
-{
-	this.unmaskBitMatrix=function(bits,  dimension)
-	{
-		for (var i = 0; i < dimension; i++)
-		{
-			for (var j = 0; j < dimension; j++)
-			{
-				if (this.isMasked(i, j))
-				{
+	unmaskBitMatrix(bits, dimension) {
+		for (var i = 0; i < dimension; i++) {
+			for (var j = 0; j < dimension; j++) {
+				if (this.isMasked(i, j)) {
 					bits.flip(j, i);
 				}
 			}
 		}
 	}
-	this.isMasked=function( i,  j)
-	{
+
+	isMasked(i, j) {
 		return ((i + j) & 0x01) == 0;
 	}
+
 }
 
-function DataMask001()
-{
-	this.unmaskBitMatrix=function(bits,  dimension)
-	{
-		for (var i = 0; i < dimension; i++)
-		{
-			for (var j = 0; j < dimension; j++)
-			{
-				if (this.isMasked(i, j))
-				{
+
+class DataMask001 {
+	unmaskBitMatrix(bits, dimension) {
+		for (var i = 0; i < dimension; i++) {
+			for (var j = 0; j < dimension; j++) {
+				if (this.isMasked(i, j)) {
 					bits.flip(j, i);
 				}
 			}
 		}
 	}
-	this.isMasked=function( i,  j)
-	{
+	isMasked(i, j) {
 		return (i & 0x01) == 0;
 	}
 }
 
-function DataMask010()
-{
-	this.unmaskBitMatrix=function(bits,  dimension)
-	{
-		for (var i = 0; i < dimension; i++)
-		{
-			for (var j = 0; j < dimension; j++)
-			{
-				if (this.isMasked(i, j))
-				{
+class DataMask010 {
+	unmaskBitMatrix(bits, dimension) {
+		for (var i = 0; i < dimension; i++) {
+			for (var j = 0; j < dimension; j++) {
+				if (this.isMasked(i, j)) {
 					bits.flip(j, i);
 				}
 			}
 		}
 	}
-	this.isMasked=function( i,  j)
-	{
+	isMasked(i, j) {
 		return j % 3 == 0;
 	}
 }
 
-function DataMask011()
-{
-	this.unmaskBitMatrix=function(bits,  dimension)
-	{
-		for (var i = 0; i < dimension; i++)
-		{
-			for (var j = 0; j < dimension; j++)
-			{
-				if (this.isMasked(i, j))
-				{
+class DataMask011 {
+	unmaskBitMatrix(bits, dimension) {
+		for (var i = 0; i < dimension; i++) {
+			for (var j = 0; j < dimension; j++) {
+				if (this.isMasked(i, j)) {
 					bits.flip(j, i);
 				}
 			}
 		}
 	}
-	this.isMasked=function( i,  j)
-	{
+	isMasked(i, j) {
 		return (i + j) % 3 == 0;
 	}
 }
 
-function DataMask100()
-{
-	this.unmaskBitMatrix=function(bits,  dimension)
-	{
-		for (var i = 0; i < dimension; i++)
-		{
-			for (var j = 0; j < dimension; j++)
-			{
-				if (this.isMasked(i, j))
-				{
+class DataMask100 {
+	unmaskBitMatrix(bits, dimension) {
+		for (var i = 0; i < dimension; i++) {
+			for (var j = 0; j < dimension; j++) {
+				if (this.isMasked(i, j)) {
 					bits.flip(j, i);
 				}
 			}
 		}
 	}
-	this.isMasked=function( i,  j)
-	{
+	isMasked(i, j) {
 		return (((URShift(i, 1)) + (j / 3)) & 0x01) == 0;
 	}
 }
 
-function DataMask101()
-{
-	this.unmaskBitMatrix=function(bits,  dimension)
-	{
-		for (var i = 0; i < dimension; i++)
-		{
-			for (var j = 0; j < dimension; j++)
-			{
-				if (this.isMasked(i, j))
-				{
+class DataMask101 {
+	unmaskBitMatrix(bits, dimension) {
+		for (var i = 0; i < dimension; i++) {
+			for (var j = 0; j < dimension; j++) {
+				if (this.isMasked(i, j)) {
 					bits.flip(j, i);
 				}
 			}
 		}
 	}
-	this.isMasked=function( i,  j)
-	{
+	isMasked(i, j) {
 		var temp = i * j;
 		return (temp & 0x01) + (temp % 3) == 0;
 	}
 }
 
-function DataMask110()
-{
-	this.unmaskBitMatrix=function(bits,  dimension)
-	{
-		for (var i = 0; i < dimension; i++)
-		{
-			for (var j = 0; j < dimension; j++)
-			{
-				if (this.isMasked(i, j))
-				{
+class DataMask110 {
+	unmaskBitMatrix(bits, dimension) {
+		for (var i = 0; i < dimension; i++) {
+			for (var j = 0; j < dimension; j++) {
+				if (this.isMasked(i, j)) {
 					bits.flip(j, i);
 				}
 			}
 		}
 	}
-	this.isMasked=function( i,  j)
-	{
+	isMasked(i, j) {
 		var temp = i * j;
 		return (((temp & 0x01) + (temp % 3)) & 0x01) == 0;
 	}
 }
-function DataMask111()
-{
-	this.unmaskBitMatrix=function(bits,  dimension)
-	{
-		for (var i = 0; i < dimension; i++)
-		{
-			for (var j = 0; j < dimension; j++)
-			{
-				if (this.isMasked(i, j))
-				{
+class DataMask111 {
+	unmaskBitMatrix(bits, dimension) {
+		for (var i = 0; i < dimension; i++) {
+			for (var j = 0; j < dimension; j++) {
+				if (this.isMasked(i, j)) {
 					bits.flip(j, i);
 				}
 			}
 		}
 	}
-	this.isMasked=function( i,  j)
-	{
+	isMasked(i, j) {
 		return ((((i + j) & 0x01) + ((i * j) % 3)) & 0x01) == 0;
 	}
 }
 
-DataMask.DATA_MASKS = [new DataMask000(), new DataMask001(), new DataMask010(), new DataMask011(), new DataMask100(), new DataMask101(), new DataMask110(), new DataMask111()];
+
+
+
+export const DataMask = {
+
+	forReference(reference) {
+		if (reference < 0 || reference > 7) {
+			throw "Reference must be between 0 and 7";
+		}
+		return this.DATA_MASKS[reference];
+	},
+
+	DATA_MASKS: [	
+		new DataMask000(), new DataMask001(), new DataMask010(), new DataMask011(), 
+		new DataMask100(), new DataMask101(), new DataMask110(), new DataMask111()
+	]
+
+};
 
