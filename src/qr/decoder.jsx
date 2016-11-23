@@ -24,6 +24,7 @@
 import { ErrorCorrectionLevel } from './errorlevel';
 import { DataBlock }            from './datablock';
 import { BitMatrixParser }      from './bmparser';
+import { ReedSolomonDecoder }   from './rsdecoder';
 
 Decoder={};
 Decoder.rsDecoder = new ReedSolomonDecoder(GF256.QR_CODE_FIELD);
