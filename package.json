@@ -1,0 +1,36 @@
+{
+  "name": "react-webrtc-screenshot",
+  "version": "1.0.0",
+  "description": "A react component for taking photos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holywyvern/react-webrtc-screenshot.git"
+  },
+  "keywords": [
+    "react",
+    "webrtc",
+    "camera",
+    "screenshot"
+  ],
+  "author": "Ramiro Rojo <ramiro.rojo.cretta@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holywyvern/react-webrtc-screenshot/issues"
+  },
+  "homepage": "https://github.com/holywyvern/react-webrtc-screenshot#readme",
+  "dependencies": {
+    "blacklist": "^1.1.4",
+    "extend": "^3.0.0",
+    "react": "^15.4.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "gulp": "^3.9.1"
+  }
+}
